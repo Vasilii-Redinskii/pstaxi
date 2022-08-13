@@ -1,0 +1,15 @@
+{% extends "__base.html" %}
+
+{% block title %}Список брендов{% endblock %}
+
+{% block content %}
+<h1>Список брендов</h1>
+<hr>
+{% include "motorpool/_brand_number.html" %}
+    <ul>
+    {% for brand in brand_objects %}
+        <li><a href="{{ brand.get_absolute_url }}">{{ brand.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% endblock %}
+
