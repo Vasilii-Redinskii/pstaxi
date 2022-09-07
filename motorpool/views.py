@@ -5,6 +5,12 @@ from django.shortcuts import render, get_object_or_404
 from motorpool.models import Brand
 from utils.text import plural_form
 
+from django.http import HttpResponse
+
+
+def index(request):
+    return HttpResponse('Hello, World')
+
 
 def brand_list(request):
     template_name = 'motorpool/brand_list.html'
